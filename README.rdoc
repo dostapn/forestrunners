@@ -9,7 +9,7 @@ Project is created 14 march 2015.
 
 Total changes:
 
-* 14/03/2015: <tt>create repo, index page, stylesheets</tt>
+* 14/03/2015: <tt>create repo, index page, stylesheets, font-awesome</tt>
 
 * ...
 
@@ -18,4 +18,4 @@ Total changes:
 
 Running is a kind of investment in yourself
 
-<tt>from fostapn with love</tt>.
+<tt>from dostapn with love</tt>.
