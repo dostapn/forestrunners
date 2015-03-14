@@ -1,28 +1,16 @@
-== README
+== PROJECT HISTORY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project is created 14 march 2015.
 
-Things you may want to cover:
+Total changes:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* 14/03/2015: <tt>create repo</tt>
 
 * ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== COPYRIGHT
+
+Running is a kind of investment in yourself
+
+<tt>from fostapn with love</tt>.
