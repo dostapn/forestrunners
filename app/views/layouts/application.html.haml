@@ -7,7 +7,7 @@
     = csrf_meta_tags
   %body
     .container
-      %nav.navbar.navbar-inverse
+      %nav.navbar
         / Brand and toggle get grouped for better mobile display
         .navbar-header
           %button.navbar-toggle.collapsed{"data-toggle" => "collapse", :type => "button"}
@@ -15,15 +15,38 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => root_path} ForestRunners Club
+          %a.navbar-brand{:href => root_path}
+            %span
+              %img{:alt => "ForestRunners", :src => "assets/logo.jpg"}
+              ForestRunners Club
         / Collect the nav links, forms, and other content for toggling
         .collapse.navbar-collapse
           .nav.navbar-nav.navbar-right
             %p.navbar-text
-              Signed in as
-              %a.navbar-link{:href => "#"}
-                %span.fa.fa-user
-                  YOUR NAME
+              -if 1
+                %a.navbar-link{:href => "#"}
+                  %span.fa.fa-sign-in
+                    Sign in
+                or
+                %a.navbar-link{:href => "#"}
+                  %span.fa.fa-unlock-alt
+                    Register
+              -else
+                Signed in as
+                %a.navbar-link{:href => "#"}
+                  %span.fa.fa-user
+                    YOUR NAME
 
       %h1 Hello!
       = yield
+
+      .clear
+      .muted
+        .pull-right
+          from dostapn with
+          .fa.fa-heart ,
+          #{Time.now.year==2015 ? 2015 : "2015-#{Time.now.year}"}
+
+
+/ Placed at the end of the document so the pages load faster
+= javascript_include_tag "application"

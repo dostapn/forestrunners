@@ -1,6 +1,6 @@
 == TO DO
 
-* настроить font-awesome и glyphicons
+* регистрация
 
 
 == PROJECT HISTORY
@@ -9,7 +9,7 @@ Project is created 14 march 2015.
 
 Total changes:
 
-* 14/03/2015: <tt>create repo, index page, stylesheets, font-awesome</tt>
+* 14/03/2015: <tt>create repo, index page, stylesheets, font-awesome, style examples</tt>
 
 * ...
 

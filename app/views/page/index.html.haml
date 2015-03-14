@@ -5,22 +5,123 @@
     dostapn
     %cite{:title => "Всемирная библиотека поэзии"} Всемирная библиотека поэзии. 2015
 
+.jumbotron
+  %h1 Hello, world!
+  %p.lead Это письмо должен Вам доставить мой ключник Трофим ровно в 8 часов вечера.
+  %p.text-muted Науки юношей питают
+  %p.text-warning Отраду старым подают
+  %p.text-danger В счастливой жизни украшают
+  %p.text-info В несчастный случай берегут
+  %p.text-success В домашних трудностях утеха
+  .text
+  %p
+    %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Learn more
 
-.lead Это письмо должен Вам доставить мой ключник Трофим ровно в 8 часов вечера.
+%p
+  .alert.alert-success{:role => "alert"}
+    %a.alert-link{:href => "#"} ...
+  .alert.alert-info{:role => "alert"}
+    %a.alert-link{:href => "#"} ...
+  .alert.alert-warning{:role => "alert"}
+    %a.alert-link{:href => "#"} ...
+  .alert.alert-danger{:role => "alert"}
+    %a.alert-link{:href => "#"} ...
 
-%p.muted Науки юношей питают
-%p.text-warning Отраду старым подают
-%p.text-error В счастливой жизни украшают
-%p.text-info В несчастный случай берегут
-%p.text-success В домашних трудностях утеха
 
 %button.btn.btn-default.btn-lg{:type => "button"}
   %span.fa.fa-camera-retro
   qq
 
+%ul.fa-ul
+  %li
+    %i.fa-li.fa.fa-check-square>
+    List icons
+  %li
+    %i.fa-li.fa.fa-check-square>
+    can be used
+  %li
+    %i.fa-li.fa.fa-spinner.fa-spin>
+    as bullets
+  %li
+    %i.fa-li.fa.fa-square>
+    in lists
 
 
+%span.fa-stack.fa-lg
+  %i.fa.fa-square-o.fa-stack-2x
+  %i.fa.fa-twitter.fa-stack-1x
+fa-twitter on fa-square-o
+%br/
+%span.fa-stack.fa-lg
+  %i.fa.fa-circle.fa-stack-2x
+  %i.fa.fa-flag.fa-stack-1x.fa-inverse
+fa-flag on fa-circle
+%br/
+%span.fa-stack.fa-lg
+  %i.fa.fa-square.fa-stack-2x
+  %i.fa.fa-terminal.fa-stack-1x.fa-inverse
+fa-terminal on fa-square
+%br/
+%span.fa-stack.fa-lg
+  %i.fa.fa-camera.fa-stack-1x
+  %i.fa.fa-ban.fa-stack-2x.text-danger
+fa-ban on fa-camera
 
+%p
+  .input-group.margin-bottom-sm
+    %span.input-group-addon
+      %i.fa.fa-envelope-o.fa-fw
+    %input.form-control{:placeholder => "Email address", :type => "text"}
+  .input-group
+    %span.input-group-addon
+      %i.fa.fa-key.fa-fw
+    %input.form-control{:placeholder => "Password", :type => "password"}
+  .input-group
+    %span.input-group-addon
+      %i.fa.fa-key.fa-fw
+    %input.form-control{:placeholder => "Password", :type => "date"}
+  .input-group
+    %span.input-group-addon
+      %i.fa.fa-key.fa-fw
+    %input.form-control{:placeholder => "Password", :type => "color"}
+
+text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color
+
+%p
+  %form.form-horizontal
+    .form-group.form-group-lg
+      %label.col-sm-2.control-label{:for => "formGroupInputLarge"} Large label
+      .col-sm-4
+        %input#formGroupInputLarge.form-control{:placeholder => "Large input", :type => "text"}/
+    .form-group.form-group-sm
+      %label.col-sm-2.control-label{:for => "formGroupInputSmall"} Small label
+      .col-sm-4
+        %input#formGroupInputSmall.form-control{:placeholder => "Small input", :type => "text"}/
+
+%p
+  %span.label.label-default Default
+  %span.label.label-primary Primary
+  %span.label.label-success Success
+  %span.label.label-info Info
+  %span.label.label-warning Warning
+  %span.label.label-danger Danger
+
+%p
+  %a{:href => "#"}
+    Inbox
+    %span.badge 42
+  %button.btn.btn-primary.btn-small{:type => "button"}
+    Messages
+    %span.badge 4
+
+%p
+  %button.btn.btn-default{:type => "button"} Default
+  %button.btn.btn-primary{:type => "button"} Primary
+  %button.btn.btn-success{:type => "button"} Success
+  %button.btn.btn-info{:type => "button"} Info
+  %button.btn.btn-warning{:type => "button"} Warning
+  %button.btn.btn-danger{:type => "button"} Danger
+  %button.btn.btn-link{:type => "button"} Link
 
 %address
   %strong Twitter, Inc.
