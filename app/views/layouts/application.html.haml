@@ -1,54 +1,31 @@
-!!! 5
-%html
+%html{:lang => "en"}
   %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     %title ForestRunners Club
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %link{:href => "http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
     = csrf_meta_tags
   %body
-    .tooltip.top
-      .tooltip-inner
-        Some tooltip text!
-      .tooltip-arrow
+    // Navigation menu
+    = render 'layouts/navbar'
+    // Header menu
+    = render 'layouts/header'
+    // Main content
     .container
-      %nav.navbar
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %button.navbar-toggle.collapsed{"data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand{:href => root_path}
-            %span
-              %img{:alt => "ForestRunners", :src => "assets/logo.jpg"}
-              ForestRunners Club
-        / Collect the nav links, forms, and other content for toggling
-        .collapse.navbar-collapse
-          .nav.navbar-nav.navbar-right
-            %p.navbar-text
-              -if 1
-                %a.fa.fa-sign-in.navbar-link{:href => "#"} Войдите
-                или
-                %a.navbar-link{"data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Tooltip on bottom", :href => "#" }
-                  %span.fa.fa-unlock-alt Зарегистрируйтесь
-              -else
-                Signed in as
-                %a.navbar-link{:href => "#"}
-                  %span.fa.fa-user
-                    YOUR NAME
-
-      %h1 Hello!
-      = yield
-
-      .clear
-      .muted
-        .pull-right
-          from dostapn with
-          .fa.fa-heart ,
-          #{Time.now.year==2015 ? 2015 : "2015-#{Time.now.year}"}
-
-
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+          = yield
+    // Footer
+    = render 'layouts/footer'
+    // Debug
+    .container-fluid
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+          = debug(params) if Rails.env.development?
 
 
 / Placed at the end of the document so the pages load faster

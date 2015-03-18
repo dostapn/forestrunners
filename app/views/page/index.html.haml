@@ -1,13 +1,3 @@
-%h3 Цитата
-
-%blockquote
-  %p
-    Бег - моя жизнь.
-  %small
-    dostapn
-    %cite{:title => "Всемирная библиотека поэзии"} Всемирная библиотека поэзии. 2015
-
-
 %h3 Джамботрон
 
 .jumbotron
@@ -47,188 +37,174 @@
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
         %h4.modal-title Название модали
       .modal-body
-        %p One fine body…
+        %h3 аккордеон
+
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                  Карусель
+            #collapseOne.panel-collapse.collapse.in
+              .panel-body
+                .bs-example
+                  .col-md-4.col-sm-4
+                    #myCarousel.carousel.slide{"data-interval" => "1000", "data-ride" => "carousel", "data-wrap" => false}
+                      / Carousel indicators
+                      %ol.carousel-indicators
+                        %li{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+                        %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+                        %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+                      / Carousel items
+                      .carousel-inner
+                        .active.item
+                          %h2 Slide 1
+                          %img{:alt => "...", :src => "assets/1.jpg"}
+                          .carousel-caption
+                            %h3 First slide label
+                            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .item
+                          %h2 Slide 2
+                          %img{:alt => "...", :src => "assets/2.jpg"}
+                          .carousel-caption
+                            %h3 Second slide label
+                            %p Aliquam sit amet gravida nibh, facilisis gravida odio.
+                        .item
+                          %h2 Slide 3
+                          %img{:alt => "...", :src => "assets/3.jpg"}
+                          .carousel-caption
+                            %h3 Third slide label
+                            %p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                      / Carousel nav
+                      %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
+                        %h1.fa.fa-chevron-left
+                      %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
+                        %h1.fa.fa-chevron-right
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                  Пункт Группы Свертывания #2
+            #collapseTwo.panel-collapse.collapse
+              .panel-body
+                %button.btn.btn-default.btn-lg{"data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Tooltip on bottom", :type => "button"}
+                  %span.fa.fa-camera-retro
+                  qq
+
+                %h3 Загрузка
+
+                %ul.fa-ul
+                  %li
+                    %i.fa-li.fa.fa-check-square>
+                    List icons
+                  %li
+                    %i.fa-li.fa.fa-check-square>
+                    can be used
+                  %li
+                    %i.fa-li.fa.fa-spinner.fa-spin>
+                    as bullets
+                  %li
+                    %i.fa-li.fa.fa-square>
+                    in lists
+
+
+                %span.fa-stack.fa-lg
+                  %i.fa.fa-square-o.fa-stack-2x
+                  %i.fa.fa-twitter.fa-stack-1x
+                fa-twitter on fa-square-o
+                %br/
+                %span.fa-stack.fa-lg
+                  %i.fa.fa-circle.fa-stack-2x
+                  %i.fa.fa-flag.fa-stack-1x.fa-inverse
+                fa-flag on fa-circle
+                %br/
+                %span.fa-stack.fa-lg
+                  %i.fa.fa-square.fa-stack-2x
+                  %i.fa.fa-terminal.fa-stack-1x.fa-inverse
+                fa-terminal on fa-square
+                %br/
+                %span.fa-stack.fa-lg
+                  %i.fa.fa-camera.fa-stack-1x
+                  %i.fa.fa-ban.fa-stack-2x.text-danger
+                fa-ban on fa-camera
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                  Пункт Группы Свертывания #3
+            #collapseThree.panel-collapse.collapse
+              .panel-body
+                .input-group.margin-bottom-sm
+                  %span.input-group-addon
+                    %i.fa.fa-envelope-o.fa-fw
+                  %input.form-control{:placeholder => "Email address", :type => "text"}
+                .input-group
+                  %span.input-group-addon
+                    %i.fa.fa-key.fa-fw
+                  %input.form-control{:placeholder => "Password", :type => "password"}
+                .input-group
+                  %span.input-group-addon
+                    %i.fa.fa-key.fa-fw
+                  %input.form-control{:placeholder => "Password", :type => "date"}
+                .input-group
+                  %span.input-group-addon
+                    %i.fa.fa-key.fa-fw
+                  %input.form-control{:placeholder => "Password", :type => "color"}
+
+              text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color
+
+              %p
+                %form.form-horizontal
+                  .form-group.form-group-lg
+                    %label.col-sm-2.control-label{:for => "formGroupInputLarge"} Large label
+                    .col-sm-4
+                      %input#formGroupInputLarge.form-control{:placeholder => "Large input", :type => "text"}/
+                  .form-group.form-group-sm
+                    %label.col-sm-2.control-label{:for => "formGroupInputSmall"} Small label
+                    .col-sm-4
+                      %input#formGroupInputSmall.form-control{:placeholder => "Small input", :type => "text"}/
+
+              %p
+                %span.label.label-default Default
+                %span.label.label-primary Primary
+                %span.label.label-success Success
+                %span.label.label-info Info
+                %span.label.label-warning Warning
+                %span.label.label-danger Danger
+
+              %p
+                %a{:href => "#"}
+                  Inbox
+                  %span.badge 42
+                %button.btn.btn-primary.btn-small{:type => "button"}
+                  Messages
+                  %span.badge 4
+
+              %p
+                %button.btn.btn-default{:type => "button"} Default
+                %button.btn.btn-primary{:type => "button"} Primary
+                %button.btn.btn-success{:type => "button"} Success
+                %button.btn.btn-info{:type => "button"} Info
+                %button.btn.btn-warning{:type => "button"} Warning
+                %button.btn.btn-danger{:type => "button"} Danger
+                %button.btn.btn-link{:type => "button"} Link
+
+              %address
+                %strong Twitter, Inc.
+                %br/
+                795 Folsom Ave, Suite 600
+                %br/
+                San Francisco, CA 94107
+                %br/
+                %abbr{:title => "Phone"} P:
+                (123) 456-7890
+              %address
+                %strong Full Name
+                %br/
+                %a{:href => "mailto:#"}
+                  first.last@gmail.com
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Закрыть
         %button.btn.btn-primary{:type => "button"} Сохранить изменения
-.clear
 
 
-%h3 Карусель
-
-.bs-example
-  .col-md-4.col-sm-4
-    #myCarousel.carousel.slide{"data-interval" => "1000", "data-ride" => "carousel", "data-wrap" => false}
-      / Carousel indicators
-      %ol.carousel-indicators
-        %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
-        %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
-        %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
-      / Carousel items
-      .carousel-inner
-        .active.item
-          %h2 Slide 1
-          %img{:alt => "...", :src => "assets/1.jpg"}
-          .carousel-caption
-            %h3 First slide label
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        .item
-          %h2 Slide 2
-          %img{:alt => "...", :src => "assets/2.jpg"}
-          .carousel-caption
-            %h3 Second slide label
-            %p Aliquam sit amet gravida nibh, facilisis gravida odio.
-        .item
-          %h2 Slide 3
-          %img{:alt => "...", :src => "assets/3.jpg"}
-          .carousel-caption
-            %h3 Third slide label
-            %p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-      / Carousel nav
-      %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
-        %h1.fa.fa-angle-left
-      %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
-        %h1.fa.fa-angle-right
-.clear
-
-%h3 аккордеон
-
-#accordion.panel-group
-  .panel.panel-default
-    .panel-heading
-      %h4.panel-title
-        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
-          Пункт Группы Свертывания #1
-    #collapseOne.panel-collapse.collapse.in
-      .panel-body
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-  .panel.panel-default
-    .panel-heading
-      %h4.panel-title
-        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
-          Пункт Группы Свертывания #2
-    #collapseTwo.panel-collapse.collapse
-      .panel-body
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-  .panel.panel-default
-    .panel-heading
-      %h4.panel-title
-        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
-          Пункт Группы Свертывания #3
-    #collapseThree.panel-collapse.collapse
-      .panel-body
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-
-%h3 Кпопка с иконкой
-
-%button.btn.btn-default.btn-lg{"data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Tooltip on bottom", :type => "button"}
-  %span.fa.fa-camera-retro
-  qq
-
-%h3 Загрузка
-
-%ul.fa-ul
-  %li
-    %i.fa-li.fa.fa-check-square>
-    List icons
-  %li
-    %i.fa-li.fa.fa-check-square>
-    can be used
-  %li
-    %i.fa-li.fa.fa-spinner.fa-spin>
-    as bullets
-  %li
-    %i.fa-li.fa.fa-square>
-    in lists
-
-
-%span.fa-stack.fa-lg
-  %i.fa.fa-square-o.fa-stack-2x
-  %i.fa.fa-twitter.fa-stack-1x
-fa-twitter on fa-square-o
-%br/
-%span.fa-stack.fa-lg
-  %i.fa.fa-circle.fa-stack-2x
-  %i.fa.fa-flag.fa-stack-1x.fa-inverse
-fa-flag on fa-circle
-%br/
-%span.fa-stack.fa-lg
-  %i.fa.fa-square.fa-stack-2x
-  %i.fa.fa-terminal.fa-stack-1x.fa-inverse
-fa-terminal on fa-square
-%br/
-%span.fa-stack.fa-lg
-  %i.fa.fa-camera.fa-stack-1x
-  %i.fa.fa-ban.fa-stack-2x.text-danger
-fa-ban on fa-camera
-
-%p
-  .input-group.margin-bottom-sm
-    %span.input-group-addon
-      %i.fa.fa-envelope-o.fa-fw
-    %input.form-control{:placeholder => "Email address", :type => "text"}
-  .input-group
-    %span.input-group-addon
-      %i.fa.fa-key.fa-fw
-    %input.form-control{:placeholder => "Password", :type => "password"}
-  .input-group
-    %span.input-group-addon
-      %i.fa.fa-key.fa-fw
-    %input.form-control{:placeholder => "Password", :type => "date"}
-  .input-group
-    %span.input-group-addon
-      %i.fa.fa-key.fa-fw
-    %input.form-control{:placeholder => "Password", :type => "color"}
-
-text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color
-
-%p
-  %form.form-horizontal
-    .form-group.form-group-lg
-      %label.col-sm-2.control-label{:for => "formGroupInputLarge"} Large label
-      .col-sm-4
-        %input#formGroupInputLarge.form-control{:placeholder => "Large input", :type => "text"}/
-    .form-group.form-group-sm
-      %label.col-sm-2.control-label{:for => "formGroupInputSmall"} Small label
-      .col-sm-4
-        %input#formGroupInputSmall.form-control{:placeholder => "Small input", :type => "text"}/
-
-%p
-  %span.label.label-default Default
-  %span.label.label-primary Primary
-  %span.label.label-success Success
-  %span.label.label-info Info
-  %span.label.label-warning Warning
-  %span.label.label-danger Danger
-
-%p
-  %a{:href => "#"}
-    Inbox
-    %span.badge 42
-  %button.btn.btn-primary.btn-small{:type => "button"}
-    Messages
-    %span.badge 4
-
-%p
-  %button.btn.btn-default{:type => "button"} Default
-  %button.btn.btn-primary{:type => "button"} Primary
-  %button.btn.btn-success{:type => "button"} Success
-  %button.btn.btn-info{:type => "button"} Info
-  %button.btn.btn-warning{:type => "button"} Warning
-  %button.btn.btn-danger{:type => "button"} Danger
-  %button.btn.btn-link{:type => "button"} Link
-
-%address
-  %strong Twitter, Inc.
-  %br/
-  795 Folsom Ave, Suite 600
-  %br/
-  San Francisco, CA 94107
-  %br/
-  %abbr{:title => "Phone"} P:
-  (123) 456-7890
-%address
-  %strong Full Name
-  %br/
-  %a{:href => "mailto:#"}
-    first.last@gmail.com

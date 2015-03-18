@@ -1,0 +1,23 @@
+%nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
+  .container-fluid
+    .navbar-header.page-scroll
+      %button.navbar-toggle{"data-target" => "#navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => root_url} ForestRunners Club
+    #navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#"}
+            %span.fa.fa-sign-in sign in
+        %li
+          %a{:href => "#"}
+            %span.fa.fa-unlock register
+        %li
+          %a{:href => "#"}
+            %span.fa.fa-sign-out sign out
+        %li
+          %a{:href => "#"}
+            %span.fa.fa-user username
