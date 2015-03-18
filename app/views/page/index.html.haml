@@ -1,9 +1,14 @@
+%h3 Цитата
+
 %blockquote
   %p
     Бег - моя жизнь.
   %small
     dostapn
     %cite{:title => "Всемирная библиотека поэзии"} Всемирная библиотека поэзии. 2015
+
+
+%h3 Джамботрон
 
 .jumbotron
   %h1 Hello, world!
@@ -17,6 +22,8 @@
   %p
     %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Learn more
 
+
+%h3 Алерты
 %p
   .alert.alert-success{:role => "alert"}
     %a.alert-link{:href => "#"} ...
@@ -28,9 +35,97 @@
     %a.alert-link{:href => "#"} ...
 
 
-%button.btn.btn-default.btn-lg{:type => "button"}
+%h3 Модальное окно
+
+%button.btn.btn-primary.btn-lg{"data-target" => "#myModal", "data-toggle" => "modal"}
+  Посмотреть демо
+
+.modal.fade#myModal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+        %h4.modal-title Название модали
+      .modal-body
+        %p One fine body…
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Закрыть
+        %button.btn.btn-primary{:type => "button"} Сохранить изменения
+.clear
+
+
+%h3 Карусель
+
+.bs-example
+  .col-md-4.col-sm-4
+    #myCarousel.carousel.slide{"data-interval" => "1000", "data-ride" => "carousel", "data-wrap" => false}
+      / Carousel indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+        %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+        %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+      / Carousel items
+      .carousel-inner
+        .active.item
+          %h2 Slide 1
+          %img{:alt => "...", :src => "assets/1.jpg"}
+          .carousel-caption
+            %h3 First slide label
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .item
+          %h2 Slide 2
+          %img{:alt => "...", :src => "assets/2.jpg"}
+          .carousel-caption
+            %h3 Second slide label
+            %p Aliquam sit amet gravida nibh, facilisis gravida odio.
+        .item
+          %h2 Slide 3
+          %img{:alt => "...", :src => "assets/3.jpg"}
+          .carousel-caption
+            %h3 Third slide label
+            %p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+      / Carousel nav
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
+        %h1.fa.fa-angle-left
+      %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
+        %h1.fa.fa-angle-right
+.clear
+
+%h3 аккордеон
+
+#accordion.panel-group
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+          Пункт Группы Свертывания #1
+    #collapseOne.panel-collapse.collapse.in
+      .panel-body
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+          Пункт Группы Свертывания #2
+    #collapseTwo.panel-collapse.collapse
+      .panel-body
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+          Пункт Группы Свертывания #3
+    #collapseThree.panel-collapse.collapse
+      .panel-body
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+%h3 Кпопка с иконкой
+
+%button.btn.btn-default.btn-lg{"data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Tooltip on bottom", :type => "button"}
   %span.fa.fa-camera-retro
   qq
+
+%h3 Загрузка
 
 %ul.fa-ul
   %li

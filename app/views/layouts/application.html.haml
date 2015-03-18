@@ -6,6 +6,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .tooltip.top
+      .tooltip-inner
+        Some tooltip text!
+      .tooltip-arrow
     .container
       %nav.navbar
         / Brand and toggle get grouped for better mobile display
@@ -24,13 +28,10 @@
           .nav.navbar-nav.navbar-right
             %p.navbar-text
               -if 1
-                %a.navbar-link{:href => "#"}
-                  %span.fa.fa-sign-in
-                    Sign in
-                or
-                %a.navbar-link{:href => "#"}
-                  %span.fa.fa-unlock-alt
-                    Register
+                %a.fa.fa-sign-in.navbar-link{:href => "#"} Войдите
+                или
+                %a.navbar-link{"data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Tooltip on bottom", :href => "#" }
+                  %span.fa.fa-unlock-alt Зарегистрируйтесь
               -else
                 Signed in as
                 %a.navbar-link{:href => "#"}
@@ -46,6 +47,8 @@
           from dostapn with
           .fa.fa-heart ,
           #{Time.now.year==2015 ? 2015 : "2015-#{Time.now.year}"}
+
+
 
 
 / Placed at the end of the document so the pages load faster
