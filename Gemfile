@@ -31,10 +31,11 @@ gem 'jbuilder', '~> 2.0'
 
 # Auth
 gem 'devise'
-gem 'omniauth'
+# gem 'omniauth'
 
 # locale
-gem 'i18n'
+gem 'rails-i18n'
+gem 'devise-i18n'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 # gem 'sdoc', '~> 0.4.0', group: :doc
