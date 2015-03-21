@@ -1,34 +1,53 @@
-%h3 Джамботрон
+.post-preview
+  %a{:href => "post.html"}
+    %h2.post-title
+      75 вещей, которые дожлен сделать каждый бегун
+    %h3.post-subtitle
+      Променять встречу с друзьями на тренировку, пробежать забег мечты, побыть в роли волонтёра — мы составили для вас длинный список того, что рано или поздно должен сделать каждый бегун.
+  %p.post-meta
+    Posted by
+    %a{:href => "#"} Dima Ostapenko
+    on March 21, 2015
+%hr/
+.post-preview
+  %a{:href => "post.html"}
+    %h2.post-title
+      Анализ техники бега по видео от профессиональных тренеров.
+    %h3.post-subtitle
+      Наш друг и постоянный автор Алишер Якупов снял свою технику бега на смартфон и попросил трех профессиональных тренеров прокомментировать видео.
+  %p.post-meta
+    Posted by
+    %a{:href => "#"} Dima Ostapenko
+    on March 21, 2015
+%hr/
+.post-preview
+  %a{:href => "post.html"}
+    %h2.post-title
+      Science has not yet mastered prophecy
+    %h3.post-subtitle
+      We predict too much for the next year and yet far too little for the next ten.
+  %p.post-meta
+    Posted by
+    %a{:href => "#"} Start Bootstrap
+    on August 24, 2014
+%hr/
+.post-preview
+  %a{:href => "post.html"}
+    %h2.post-title
+      Failure is not an option
+    %h3.post-subtitle
+      Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+  %p.post-meta
+    Posted by
+    %a{:href => "#"} Start Bootstrap
+    on July 8, 2014
 
-.jumbotron
-  %h1 Hello, world!
-  %p.lead Это письмо должен Вам доставить мой ключник Трофим ровно в 8 часов вечера.
-  %p.text-muted Науки юношей питают
-  %p.text-warning Отраду старым подают
-  %p.text-danger В счастливой жизни украшают
-  %p.text-info В несчастный случай берегут
-  %p.text-success В домашних трудностях утеха
-  .text
-  %p
-    %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Learn more
-
-
-%h3 Алерты
-%p
-  .alert.alert-success{:role => "alert"}
-    %a.alert-link{:href => "#"} ...
-  .alert.alert-info{:role => "alert"}
-    %a.alert-link{:href => "#"} ...
-  .alert.alert-warning{:role => "alert"}
-    %a.alert-link{:href => "#"} ...
-  .alert.alert-danger{:role => "alert"}
-    %a.alert-link{:href => "#"} ...
-
-
-%h3 Модальное окно
-
-%button.btn.btn-primary.btn-lg{"data-target" => "#myModal", "data-toggle" => "modal"}
-  Посмотреть демо
+%hr
+/ Pager
+%ul.pager
+  %li.next
+    %a{"data-target" => "#myModal", "data-toggle" => "modal"}} Older Posts →
+%hr
 
 .modal.fade#myModal
   .modal-dialog
@@ -37,6 +56,25 @@
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
         %h4.modal-title Название модали
       .modal-body
+
+        %p.lead Это письмо должен Вам доставить мой ключник Трофим ровно в 8 часов вечера.
+        %p.text-muted Науки юношей питают
+        %p.text-warning Отраду старым подают
+        %p.text-danger В счастливой жизни украшают
+        %p.text-info В несчастный случай берегут
+        %p.text-success В домашних трудностях утеха
+
+        %h3 Алерты
+        %p
+          .alert.alert-success{:role => "alert"}
+            %a.alert-link{:href => "#"} ...
+          .alert.alert-info{:role => "alert"}
+            %a.alert-link{:href => "#"} ...
+          .alert.alert-warning{:role => "alert"}
+            %a.alert-link{:href => "#"} ...
+          .alert.alert-danger{:role => "alert"}
+            %a.alert-link{:href => "#"} ...
+
         %h3 аккордеон
 
         #accordion.panel-group
