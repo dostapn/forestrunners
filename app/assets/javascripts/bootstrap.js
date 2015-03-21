@@ -19,23 +19,23 @@ jQuery(function() {
                     //if scrolling up...
                     if ((currentTop > 0) && $(".navbar-custom").hasClass("is-fixed")) {
                         $(".navbar-custom").addClass("is-visible");
-                        console.log("addClass is-visible");
+                        // console.log("addClass is-visible");
                     } else {
                         $(".navbar-custom").removeClass("is-fixed is-visible");
-                        console.log("removeClass is-fixed is-visible");
+                        // console.log("removeClass is-fixed is-visible");
                     }
                 } else {
                     //if scrolling down...
                     $(".navbar-custom").removeClass("is-visible");
-                    console.log("removeClass is-visible");
+                    // console.log("removeClass is-visible");
                     if (currentTop > headerHeight && !$(".navbar-custom").hasClass("is-fixed")) {
                         $(".navbar-custom").addClass("is-fixed");
-                        console.log("addClass is-fixed");
+                        // console.log("addClass is-fixed");
                     }
                 }
-                console.log("prevTop = " + prevTop);
-                console.log("previousTop = " + this.previousTop);
-                console.log("cuurentTop = " + currentTop);
+                // console.log("prevTop = " + prevTop);
+                // console.log("previousTop = " + this.previousTop);
+                // console.log("cuurentTop = " + currentTop);
                 prevTop = this.previousTop;
                 this.previousTop = currentTop;
             }
