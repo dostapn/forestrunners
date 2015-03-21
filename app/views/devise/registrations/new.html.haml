@@ -20,8 +20,7 @@
   .field
     = f.label :password
     - if @validatable
-      %em
-        (не менее #{@minimum_password_length} символов)
+      %em (не менее #{@minimum_password_length} символов)
     %br
     = f.password_field :password, autocomplete: "off"
   .field
