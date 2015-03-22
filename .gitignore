@@ -13,6 +13,10 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
+# Ignore secret files
+/config/secrets.yml
+.env
+
 # Ignore all logfiles and tempfiles.
 *~
 /log/*.log
@@ -20,5 +24,6 @@
 /public/system
 /public/assets
 .idea
+
 .directory
 .DS_Store

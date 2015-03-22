@@ -1,7 +1,16 @@
 == TO DO
 
-* menu toggle on scrolling javascript
-
+* social netwokrd auth
+* topics
+* calendar
+* gallery
+* friendship
+* import runs
+* parse newrunners
+* get run statistics from newrruners and parkrun
+* message system
+* pop-ups
+* something more... :)
 
 
 == PROJECT HISTORY
@@ -13,7 +22,7 @@ Total changes:
 * 14/03/2015: <tt>create repo, index page, stylesheets, font-awesome, style examples</tt>
 * 18/03/2015: <tt>js style, template, mainpage app markup, navbar js popup</tt>
 * 21/03/2015: <tt>devise auth, render controller header</tt>
-
+* 22/03/2015: <tt></tt>
 
 
 == COPYRIGHT
