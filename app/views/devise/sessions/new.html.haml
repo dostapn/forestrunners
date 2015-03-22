@@ -1,17 +1,37 @@
-%h2 Вход
+%h2.center Вход
+%hr
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
+    .col-sm-4.right
+      = f.label :login
+    .input-group.col-sm-8
+      %span.input-group-addon
+        %i.fa.fa-envelope-o.fa-fw
+      %input.form-control{placeholder: "Электронная почта", type: "text", id: "user_email", name: "user[email]"}
+
   .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Войти"
+    .col-sm-4.right
+      = f.label :password
+    .input-group.col-sm-8
+      %span.input-group-addon
+        %i.fa.fa-key.fa-fw
+      %input.form-control{:placeholder => "Password", :type => "password", id: "user_password", name: "user[password]", autocomplete: "off"}
+  .field
+    .col-sm-4.right
+      %label{for: "remember_me"} Запомнить меня
+    .col-sm-8
+      .checkbox.checkbox-primary
+        %input#remember_me{:type => "checkbox"}
+    %br
+  .col-sm-4.right
+  .col-sm-8
+    .actions
+      %button.btn.btn-default{:type => "submit"} Войти
+
+
+
 = render "devise/shared/links"
+
+
+
+
