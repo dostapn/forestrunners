@@ -18,6 +18,7 @@
     = f.label :email
     %br
     = f.email_field :email
+  %hr
   .field
     = f.label :password
     %i (оставте пустым, если не хотите его менять)
@@ -27,11 +28,6 @@
     = f.label :password_confirmation
     %br
     = f.password_field :password_confirmation, autocomplete: "off"
-  .field
-    = f.label :current_password
-    %i (нам нужен ваш текущий пароль, чтобы сохранить изменения)
-    %br
-    = f.password_field :current_password, autocomplete: "off"
   .actions
     = f.submit "Обновить"
 %h3 Удалить аккаунт?
