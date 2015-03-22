@@ -22,7 +22,7 @@ Total changes:
 * 14/03/2015: <tt>create repo, index page, stylesheets, font-awesome, style examples</tt>
 * 18/03/2015: <tt>js style, template, mainpage app markup, navbar js popup</tt>
 * 21/03/2015: <tt>devise auth, render controller header</tt>
-* 22/03/2015: <tt></tt>
+* 22/03/2015: <tt>mailer, password recovery</tt>
 
 
 == COPYRIGHT
